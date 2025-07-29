@@ -26,20 +26,38 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
-        <div class="nav-logo">
-          <a href="#home">Faniel Habte</a>
+        <div class="nav-location">
+          <span id="location-time"
+            >fanielhabte.com Seattle, WA · <span id="current-time"></span
+          ></span>
         </div>
         <div class="nav-menu" id="nav-menu">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#resume" class="nav-link">Resume</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <div class="nav-toggle" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="menu-dropdown">
+            <button class="menu-toggle" id="menu-toggle">
+              <span class="menu-text">Menu</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content" id="desktop-dropdown">
+              <a href="#home" class="dropdown-link">Home</a>
+              <a href="#about" class="dropdown-link">About</a>
+              <a href="#projects" class="dropdown-link">Projects</a>
+              <a href="#contact" class="dropdown-link">Contact</a>
+            </div>
+          </div>
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="mobile-dropdown-content" id="mobile-dropdown">
+            <a href="#home" class="dropdown-link">Home</a>
+            <a href="#about" class="dropdown-link">About</a>
+            <a href="#projects" class="dropdown-link">Projects</a>
+            <a href="#contact" class="dropdown-link">Contact</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -48,93 +66,103 @@
     <section id="home" class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1 class="hero-title">Faniel Habte</h1>
-          <p class="hero-subtitle">
-            Business Intelligence Engineer at Amazon specializing in Data
-            Analysis and Data Engineering
-          </p>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <div class="profile-image">
+            <img
+              src="F5E3B30E-F07B-46FC-88B8-1FEB0E411B88_1_102_o.jpeg"
+              alt="Faniel Habte"
+              class="profile-photo"
+            />
           </div>
+          <h1 class="hero-title">Hi, I'm Faniel —</h1>
+          <p class="hero-subtitle">
+            a Business Intelligence Engineer at Amazon fascinated by data and
+            its impact on business decisions. This is my portfolio.
+          </p>
         </div>
-        <div class="hero-image">
-          <div class="hero-icon">
-            <i class="fas fa-chart-line"></i>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="about" class="experience">
+      <div class="container">
+        <div class="experience-grid">
+          <div class="experience-card">
+            <div class="experience-icon">A</div>
+            <h3>Right now, I build data solutions and dashboards at Amazon</h3>
+            <p>
+              2024 — Business Intelligence Engineer, creating executive
+              dashboards and automated reporting systems.
+            </p>
+            <p>
+              2023-2024 — Business Analyst Intern, migrated Tableau dashboards
+              to QuickSight and managed AWS data pipelines.
+            </p>
+            <div class="experience-arrow">→</div>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">D</div>
+            <h3>Previously, I was a data analyst and logistics specialist</h3>
+            <p>
+              2022-2023 — Amazon Flex Driver, optimized delivery routes and
+              addressed customer concerns.
+            </p>
+            <p>
+              2022-2023 — Bookkeeper at Palma Trucking LLC, streamlined AR/AP
+              processes and improved financial accuracy.
+            </p>
+            <div class="experience-arrow">→</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Background Section -->
+    <section class="background">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
+        <div class="background-grid">
+          <div class="background-card">
+            <h3>I started my career in software development</h3>
             <p>
-              I'm a passionate Business Intelligence Engineer at Amazon with
-              expertise in both data analysis and data engineering. I transform
-              complex data into actionable insights that drive business
-              decisions and create impactful dashboards.
-            </p>
-            <p>
-              With experience in AWS services, QuickSight, and modern BI tools,
-              I help organizations build robust data pipelines and create
-              compelling visualizations that tell meaningful stories and drive
-              strategic decisions.
+              Currently pursuing a Bachelor of Science in Software Engineering
+              at Western Governors University, focusing on algorithms, data
+              structures, and software design.
             </p>
           </div>
-          <div class="about-stats">
-            <div class="stat">
-              <h3>2+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div class="stat">
-              <h3>20+</h3>
-              <p>Dashboards Built</p>
-            </div>
-            <div class="stat">
-              <h3>10+</h3>
-              <p>Technologies</p>
-            </div>
+          <div class="background-card">
+            <h3>But my true passion is data and analytics</h3>
+            <p>
+              I transitioned to data engineering because I love transforming
+              complex information into actionable insights that drive business
+              decisions.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="skills-section">
-          <h3>Technical Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4>Data Analysis</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">QuickSight</span>
-                <span class="skill-tag">Tableau</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">KPI Tracking</span>
-                <span class="skill-tag">Dashboard Creation</span>
-                <span class="skill-tag">Microsoft Excel</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Data Engineering</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">ETL</span>
-                <span class="skill-tag">Glue</span>
-                <span class="skill-tag">Redshift</span>
-                <span class="skill-tag">S3</span>
-                <span class="skill-tag">Data Pipelines</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4>Programming</h4>
-              <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">JavaScript</span>
-              </div>
-            </div>
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skills-card">
+            <div class="skills-icon">📊</div>
+            <h3>I specialize in data analysis and visualization</h3>
+            <p>
+              Creating interactive dashboards with QuickSight, Tableau, and
+              Power BI. Building 20+ dashboards that save 20+ hours/month in
+              reporting.
+            </p>
+            <div class="skills-arrow">→</div>
+          </div>
+          <div class="skills-card">
+            <div class="skills-icon">⚙️</div>
+            <h3>I also build robust data pipelines</h3>
+            <p>
+              Designing ETL processes with AWS services, managing data
+              warehouses, and ensuring reliable data flow for business
+              intelligence needs.
+            </p>
+            <div class="skills-arrow">→</div>
           </div>
         </div>
       </div>
@@ -143,218 +171,32 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">
-            All Projects
-          </button>
-          <button class="filter-btn" data-filter="data-analyst">
-            Data Analyst
-          </button>
-          <button class="filter-btn" data-filter="data-engineer">
-            Data Engineer
-          </button>
-        </div>
-
         <div class="projects-grid">
-          <!-- Data Analyst Projects -->
-          <div class="project-card" data-category="data-analyst">
-            <div class="project-image">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <div class="project-content">
-              <h3>VP-Level Executive Dashboard</h3>
-              <p>
-                Owned and developed VP-level executive dashboard presented at
-                SVP review, providing critical business insights and KPIs for
-                strategic decision-making.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">QuickSight</span>
-                <span class="tool-tag">SQL</span>
-                <span class="tool-tag">AWS</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> Dashboard
-                  Overview</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card" data-category="data-analyst">
-            <div class="project-image">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <div class="project-content">
-              <h3>Product Engagement Analysis</h3>
-              <p>
-                Led comprehensive product engagement analysis across
-                sustainability platforms, creating dashboards to track user
-                behavior and platform performance.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">QuickSight</span>
-                <span class="tool-tag">SQL</span>
-                <span class="tool-tag">Data Analysis</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> Analysis Overview</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card" data-category="data-analyst">
-            <div class="project-image">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="project-content">
-              <h3>Customer Sentiment Dashboard</h3>
-              <p>
-                Created comprehensive dashboards for customer sentiment and user
-                engagement analysis, providing actionable insights for business
-                improvement.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">QuickSight</span>
-                <span class="tool-tag">SQL</span>
-                <span class="tool-tag">AWS</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> Dashboard
-                  Overview</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Data Engineer Projects -->
-          <div class="project-card" data-category="data-engineer">
-            <div class="project-image">
-              <i class="fas fa-database"></i>
-            </div>
-            <div class="project-content">
-              <h3>AWS Data Pipeline Management</h3>
-              <p>
-                Executed daily queries and managed AWS data pipelines, ensuring
-                reliable data flow and processing for business intelligence
-                needs.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">AWS</span>
-                <span class="tool-tag">SQL</span>
-                <span class="tool-tag">Data Pipelines</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> Pipeline Overview</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card" data-category="data-engineer">
-            <div class="project-image">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <div class="project-content">
-              <h3>Tableau to QuickSight Migration</h3>
-              <p>
-                Successfully migrated Tableau dashboards to QuickSight,
-                improving performance and reducing costs while maintaining
-                functionality.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">QuickSight</span>
-                <span class="tool-tag">Tableau</span>
-                <span class="tool-tag">AWS</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> Migration
-                  Overview</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card" data-category="data-engineer">
-            <div class="project-image">
-              <i class="fas fa-cogs"></i>
-            </div>
-            <div class="project-content">
-              <h3>Automated Reporting System</h3>
-              <p>
-                Built 20+ QuickSight dashboards to automate reporting and save
-                20+ hours/month, improving efficiency and data accessibility.
-              </p>
-              <div class="project-tools">
-                <span class="tool-tag">QuickSight</span>
-                <span class="tool-tag">ETL</span>
-                <span class="tool-tag">AWS</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link"
-                  ><i class="fas fa-external-link-alt"></i> System Overview</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-      <div class="container">
-        <h2 class="section-title">Resume</h2>
-        <div class="resume-content">
-          <div class="resume-summary">
-            <h3>Professional Summary</h3>
+          <div class="project-card">
+            <h3>VP-Level Executive Dashboard</h3>
             <p>
-              Experienced Business Intelligence Engineer at Amazon with 2+ years
-              of expertise in data analysis and data engineering. Proven track
-              record of building scalable data solutions and creating impactful
-              visualizations that drive business decisions.
+              Owned and developed VP-level executive dashboard presented at SVP
+              review, providing critical business insights and KPIs for
+              strategic decision-making.
             </p>
-
-            <div class="resume-highlights">
-              <div class="highlight">
-                <i class="fas fa-check-circle"></i>
-                <span
-                  >Built 20+ QuickSight dashboards to automate reporting and
-                  save 20+ hours/month</span
-                >
-              </div>
-              <div class="highlight">
-                <i class="fas fa-check-circle"></i>
-                <span
-                  >Owned VP-level executive dashboard presented at SVP
-                  review</span
-                >
-              </div>
-              <div class="highlight">
-                <i class="fas fa-check-circle"></i>
-                <span
-                  >Led product engagement analysis across sustainability
-                  platforms</span
-                >
-              </div>
-            </div>
+            <div class="project-arrow">→</div>
           </div>
-
-          <div class="resume-download">
-            <a
-              href="path/to/Faniel_Habte_Resume.pdf"
-              class="btn btn-primary download-btn"
-            >
-              <i class="fas fa-download"></i>
-              Download Full Resume (PDF)
-            </a>
+          <div class="project-card">
+            <h3>Product Engagement Analysis</h3>
+            <p>
+              Led comprehensive product engagement analysis across
+              sustainability platforms, creating dashboards to track user
+              behavior and platform performance.
+            </p>
+            <div class="project-arrow">→</div>
+          </div>
+          <div class="project-card">
+            <h3>Automated Reporting System</h3>
+            <p>
+              Built 20+ QuickSight dashboards to automate reporting and save 20+
+              hours/month, improving efficiency and data accessibility.
+            </p>
+            <div class="project-arrow">→</div>
           </div>
         </div>
       </div>
@@ -363,58 +205,30 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <h3>Let's Connect</h3>
-            <p>
-              I'm always interested in new opportunities and collaborations.
-              Feel free to reach out!
-            </p>
-
-            <div class="contact-links">
-              <a
-                href="https://www.linkedin.com/in/fanielhabte"
-                class="contact-link"
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">👋</div>
+            <h3>Always down to collaborate when I have the time</h3>
+            <p>Reach out for case studies and opportunities.</p>
+            <div class="contact-arrow">→</div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-info">
+              <a href="mailto:fanielhabte1@gmail.com" class="contact-email"
+                >fanielhabte1@gmail.com</a
               >
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/fanielhabte" class="contact-link">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-              <a href="mailto:fanielhabte1@gmail.com" class="contact-link">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-              </a>
+              <div class="contact-links">
+                <a
+                  href="https://www.linkedin.com/in/fanielhabte"
+                  class="contact-link"
+                  >LinkedIn</a
+                >
+                <a href="https://github.com/fanielhabte" class="contact-link"
+                  >GitHub</a
+                >
+              </div>
             </div>
           </div>
-
-          <form class="contact-form" id="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
         </div>
       </div>
     </section>
@@ -422,10 +236,39 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2024 Faniel Habte. All rights reserved.</p>
+        <p>All the best,<br />Faniel</p>
+        <p class="footer-copyright">&copy; 2024 Faniel Habte</p>
       </div>
     </footer>
 
     <script src="script.js"></script>
+        <script>
+      // Immediate time update and start dynamic updates
+      function updateTimeInline() {
+        const timeElement = document.getElementById("current-time");
+        if (timeElement) {
+          const now = new Date();
+          const timeString = now.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+          });
+          timeElement.textContent = timeString;
+        }
+      }
+      
+      // Update immediately
+      updateTimeInline();
+      
+      // Start dynamic updates
+      setInterval(updateTimeInline, 1000);
+      
+      // Also update when DOM is ready
+      document.addEventListener("DOMContentLoaded", function () {
+        updateTimeInline();
+        setInterval(updateTimeInline, 1000);
+      });
+    </script>
   </body>
 </html>
