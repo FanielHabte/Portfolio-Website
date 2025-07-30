@@ -951,8 +951,10 @@ body.dark-theme .footer-copyright {
   }
 
   .skills-icon-img {
-    width: 70px;
-    height: 70px;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
   }
 
   .sustainability-logo {
@@ -1008,8 +1010,10 @@ body.dark-theme .footer-copyright {
   }
 
   .skills-icon-img {
-    width: 60px;
-    height: 60px;
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
   }
 
   .sustainability-logo {
