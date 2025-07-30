@@ -312,8 +312,8 @@ body.dark-theme .hero {
 }
 
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 0 auto;
   display: block;
@@ -367,12 +367,18 @@ body.dark-theme .experience {
   background: #111111;
 }
 
+.experience {
+  position: relative;
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 3;
 }
 
 .experience-card {
@@ -380,9 +386,9 @@ body.dark-theme .experience {
 }
 
 .experience-icon {
-  width: 60px;
-  height: 60px;
-  background: #333;
+  width: 100px;
+  height: 100px;
+  background: #f8f9fa;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -391,11 +397,81 @@ body.dark-theme .experience {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-theme .experience-icon {
-  background: #fff;
+  background: #f8f9fa;
   color: #000;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  max-width: 80px;
+  max-height: 80px;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.company-logos {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.company-logos img {
+  flex-shrink: 0;
+  display: block;
+}
+
+.experience-icon a {
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.experience-icon a:hover {
+  transform: scale(1.05);
+}
+
+.sustainability-logo {
+  opacity: 0.9;
+  filter: grayscale(100%) brightness(1.1);
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  max-width: 80px;
+  max-height: 80px;
+  margin-top: 5px;
+}
+
+body.dark-theme .sustainability-logo {
+  filter: grayscale(100%) brightness(1.3);
+}
+
+.company-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+body.dark-theme .company-logo {
+  filter: grayscale(100%) brightness(1.5);
+  opacity: 1;
+}
+
+body.dark-theme .company-logo:hover {
+  filter: grayscale(0%) brightness(1.5);
+}
+
+body.dark-theme .sustainability-logo:hover {
+  filter: grayscale(0%) brightness(1.3);
 }
 
 .experience-card h3 {
@@ -494,6 +570,36 @@ body.dark-theme .skills {
 .skills-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skills-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  max-width: 80px;
+  max-height: 80px;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.skills-icon-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+body.dark-theme .skills-icon-img {
+  filter: grayscale(100%) brightness(1.5);
+  opacity: 1;
+}
+
+body.dark-theme .skills-icon-img:hover {
+  filter: grayscale(0%) brightness(1.5);
+  opacity: 1;
 }
 
 .skills-card h3 {
@@ -579,6 +685,38 @@ body.dark-theme .project-card h3 {
 
 body.dark-theme .project-card p {
   color: #aaa;
+}
+
+.project-tools {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.tool-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.tool-icon:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+body.dark-theme .tool-icon {
+  filter: grayscale(100%) brightness(1.5);
+  opacity: 0.9;
+}
+
+body.dark-theme .tool-icon:hover {
+  filter: grayscale(0%) brightness(1.5);
+  opacity: 1;
 }
 
 .project-arrow {
@@ -762,8 +900,8 @@ body.dark-theme .footer-copyright {
   }
 
   .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   .hero-title {
@@ -796,6 +934,35 @@ body.dark-theme .footer-copyright {
     position: static;
     margin-top: 1rem;
   }
+
+  .project-tools {
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+  }
+
+  .tool-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .company-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills-icon-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .sustainability-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .company-logos {
+    gap: 0.4rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -814,8 +981,8 @@ body.dark-theme .footer-copyright {
   }
 
   .profile-photo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .hero-title {
@@ -828,5 +995,29 @@ body.dark-theme .footer-copyright {
   .contact-card h3,
   .project-card h3 {
     font-size: 1.25rem;
+  }
+
+  .tool-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .company-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-icon-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sustainability-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .company-logos {
+    gap: 0.3rem;
   }
 }

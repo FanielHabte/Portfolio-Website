@@ -68,12 +68,12 @@
         <div class="hero-content">
           <div class="profile-image">
             <img
-              src="F5E3B30E-F07B-46FC-88B8-1FEB0E411B88_1_102_o.jpeg"
+              src="photos/professional-photo.jpeg"
               alt="Faniel Habte"
               class="profile-photo"
             />
           </div>
-          <h1 class="hero-title">Hi, I'm Faniel —</h1>
+          <h1 class="hero-title">Hi, I'm Fani</h1>
           <p class="hero-subtitle">
             a Business Intelligence Engineer at Amazon fascinated by data and
             its impact on business decisions. This is my portfolio.
@@ -87,25 +87,49 @@
       <div class="container">
         <div class="experience-grid">
           <div class="experience-card">
-            <div class="experience-icon">A</div>
+            <div class="experience-icon">
+              <a
+                href="https://sustainability.aboutamazon.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="photos/amazon-logo.png"
+                  alt="Amazon"
+                  class="company-logo"
+                />
+              </a>
+            </div>
             <h3>Right now, I build data solutions and dashboards at Amazon</h3>
             <p>
-              2024 — Business Intelligence Engineer, creating executive
-              dashboards and automated reporting systems.
+              2024 — Business Intelligence Engineer (Sustainability), creating
+              executive dashboards and automated reporting systems.
             </p>
             <p>
-              2023-2024 — Business Analyst Intern, migrated Tableau dashboards
-              to QuickSight and managed AWS data pipelines.
+              2023-2024 — Business Analyst Intern (Sustainability), migrated
+              Tableau dashboards to QuickSight and managed AWS data pipelines.
             </p>
-            <div class="experience-arrow">→</div>
-          </div>
-          <div class="experience-card">
-            <div class="experience-icon">D</div>
-            <h3>Previously, I was a data analyst and logistics specialist</h3>
             <p>
               2022-2023 — Amazon Flex Driver, optimized delivery routes and
               addressed customer concerns.
             </p>
+            <div class="experience-arrow">→</div>
+          </div>
+          <div class="experience-card">
+            <div class="experience-icon">
+              <a
+                href="http://www.palmatrucking.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="photos/palmatrucking-logo.png"
+                  alt="Palma Trucking"
+                  class="company-logo"
+                />
+              </a>
+            </div>
+            <h3>Previously, I was a bookkeeper and logistics specialist</h3>
             <p>
               2022-2023 — Bookkeeper at Palma Trucking LLC, streamlined AR/AP
               processes and improved financial accuracy.
@@ -145,7 +169,13 @@
       <div class="container">
         <div class="skills-grid">
           <div class="skills-card">
-            <div class="skills-icon">📊</div>
+            <div class="skills-icon">
+              <img
+                src="photos/business-intelligence.png"
+                alt="Business Intelligence"
+                class="skills-icon-img"
+              />
+            </div>
             <h3>I specialize in data analysis and visualization</h3>
             <p>
               Creating interactive dashboards with QuickSight, Tableau, and
@@ -155,7 +185,13 @@
             <div class="skills-arrow">→</div>
           </div>
           <div class="skills-card">
-            <div class="skills-icon">⚙️</div>
+            <div class="skills-icon">
+              <img
+                src="photos/data-pipeline.png"
+                alt="Data Pipeline"
+                class="skills-icon-img"
+              />
+            </div>
             <h3>I also build robust data pipelines</h3>
             <p>
               Designing ETL processes with AWS services, managing data
@@ -179,6 +215,19 @@
               review, providing critical business insights and KPIs for
               strategic decision-making.
             </p>
+            <div class="project-tools">
+              <img
+                src="photos/amazon-quicksight.png"
+                alt="Amazon QuickSight"
+                class="tool-icon"
+              />
+              <img src="photos/tableau.png" alt="Tableau" class="tool-icon" />
+              <img
+                src="photos/excel.png"
+                alt="Microsoft Excel"
+                class="tool-icon"
+              />
+            </div>
             <div class="project-arrow">→</div>
           </div>
           <div class="project-card">
@@ -188,6 +237,19 @@
               sustainability platforms, creating dashboards to track user
               behavior and platform performance.
             </p>
+            <div class="project-tools">
+              <img
+                src="photos/amazon-quicksight.png"
+                alt="Amazon QuickSight"
+                class="tool-icon"
+              />
+              <img
+                src="photos/amazon-athena.png"
+                alt="Amazon Athena"
+                class="tool-icon"
+              />
+              <img src="photos/python.png" alt="Python" class="tool-icon" />
+            </div>
             <div class="project-arrow">→</div>
           </div>
           <div class="project-card">
@@ -196,6 +258,19 @@
               Built 20+ QuickSight dashboards to automate reporting and save 20+
               hours/month, improving efficiency and data accessibility.
             </p>
+            <div class="project-tools">
+              <img
+                src="photos/amazon-quicksight.png"
+                alt="Amazon QuickSight"
+                class="tool-icon"
+              />
+              <img src="photos/aws_glue.png" alt="AWS Glue" class="tool-icon" />
+              <img
+                src="photos/amazon-redshift.png"
+                alt="Amazon Redshift"
+                class="tool-icon"
+              />
+            </div>
             <div class="project-arrow">→</div>
           </div>
         </div>
@@ -242,7 +317,7 @@
     </footer>
 
     <script src="script.js"></script>
-        <script>
+    <script>
       // Immediate time update and start dynamic updates
       function updateTimeInline() {
         const timeElement = document.getElementById("current-time");
@@ -257,13 +332,13 @@
           timeElement.textContent = timeString;
         }
       }
-      
+
       // Update immediately
       updateTimeInline();
-      
+
       // Start dynamic updates
       setInterval(updateTimeInline, 1000);
-      
+
       // Also update when DOM is ready
       document.addEventListener("DOMContentLoaded", function () {
         updateTimeInline();
