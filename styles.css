@@ -50,6 +50,7 @@ html {
 
   --accent: #2d6cdf;
   --accent-ink: #ffffff;
+
 }
 
 body.dark-theme {
@@ -594,21 +595,27 @@ body.dark-theme .brand-logo {
   padding: 0.75rem;
   display: grid;
   justify-items: center;
-  gap: 0.4rem;
+  gap: 0.25rem;
   color: var(--muted2);
   background: color-mix(in oklab, var(--card) 90%, transparent);
   font-size: var(--fs-sm);
 }
 
 .mini-tile.mini-photo {
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 .mini-tile.mini-photo img {
   width: 100%;
-  height: clamp(80px, 12vw, 130px);
+  height: auto;
   object-fit: cover;
   border-radius: calc(var(--radius-sm) - 6px);
+}
+
+@media (min-width: 921px) {
+  .mini-tile.mini-photo img {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 /* Callout */
