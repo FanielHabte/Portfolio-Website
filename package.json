@@ -18,16 +18,16 @@
     "responsive",
     "modern"
   ],
-  "author": "Your Name",
+  "author": "Faniel Habte",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/bie-portfolio.git"
+    "url": "https://github.com/fanielhabte"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/bie-portfolio/issues"
+    "url": "https://github.com/fanielhabte"
   },
-  "homepage": "https://yourusername.github.io/bie-portfolio",
+  "homepage": "https://fanielhabte.com",
   "devDependencies": {
     "http-server": "^14.1.1",
     "live-server": "^1.2.2"
@@ -35,4 +35,4 @@
   "engines": {
     "node": ">=14.0.0"
   }
-} 
+}

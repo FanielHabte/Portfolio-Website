@@ -1,349 +1,770 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
+      content="Faniel Habte (Fani) — Business Intelligence Engineer. Portfolio featuring a career timeline, skills, and personal projects."
       name="description"
-      content="BIE Portfolio - Data Analyst & Data Engineer showcasing real-world projects and professional experience"
     />
     <meta
+      content="business intelligence engineer, data engineer, analytics engineer, SQL, Python, AWS, QuickSight, Tableau, portfolio"
       name="keywords"
-      content="data analyst, data engineer, business intelligence, portfolio, SQL, Python, Tableau, Power BI"
     />
-    <title>Faniel Habte - Business Intelligence Engineer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Faniel Habte — Business Intelligence Engineer</title>
+    <link href="styles.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
     />
   </head>
   <body>
+    <a class="skip-link" href="#home">Skip to content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav aria-label="Primary" class="navbar">
       <div class="nav-container">
-        <div class="nav-location">
-          <span id="location-time"
-            >fanielhabte.com Seattle, WA · <span id="current-time"></span
-          ></span>
-        </div>
-        <div class="nav-menu" id="nav-menu">
-          <button class="theme-toggle" id="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-          <div class="menu-dropdown">
-            <button class="menu-toggle" id="menu-toggle">
-              <span class="menu-text">Menu</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content" id="desktop-dropdown">
-              <a href="#home" class="dropdown-link">Home</a>
-              <a href="#about" class="dropdown-link">About</a>
-              <a href="#projects" class="dropdown-link">Projects</a>
-              <a href="#contact" class="dropdown-link">Contact</a>
-            </div>
+        <div class="nav-left">
+          <a aria-label="Go to top" class="brand" href="#home"
+            ><img
+              alt="Faniel Habte"
+              class="brand-logo"
+              src="assets/logo.svg"
+            /><span class="sr-only">Faniel Habte</span></a
+          >
+          <div aria-hidden="true" class="nav-location">
+            <span id="location-time"
+              >Seattle, WA · <span id="current-time"></span
+            ></span>
           </div>
-          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-          <div class="mobile-dropdown-content" id="mobile-dropdown">
-            <a href="#home" class="dropdown-link">Home</a>
-            <a href="#about" class="dropdown-link">About</a>
-            <a href="#projects" class="dropdown-link">Projects</a>
-            <a href="#contact" class="dropdown-link">Contact</a>
+        </div>
+        <div class="nav-right">
+          <div class="nav-links" id="desktop-nav">
+            <a class="nav-link" href="#home">Intro</a>
+            <a class="nav-link" href="#story">Story</a>
+            <a class="nav-link" href="#timeline">Timeline</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+          <div class="nav-actions">
+            <button
+              aria-label="Toggle theme"
+              class="icon-btn"
+              id="theme-toggle"
+            >
+              <i aria-hidden="true" class="fas fa-moon"></i>
+            </button>
+            <button
+              aria-controls="mobile-drawer"
+              aria-expanded="false"
+              aria-label="Open menu"
+              class="icon-btn mobile-menu-toggle"
+              id="mobile-menu-toggle"
+            >
+              <span aria-hidden="true" class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="profile-image">
-            <img
-              src="photos/professional-photo.jpeg"
-              alt="Faniel Habte"
-              class="profile-photo"
-            />
-          </div>
-          <h1 class="hero-title">Hi, I'm Fani</h1>
-          <p class="hero-subtitle">
-            a Business Intelligence Engineer at Amazon fascinated by data and
-            its impact on business decisions. This is my portfolio.
-          </p>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" hidden="" id="mobile-drawer">
+      <div class="mobile-drawer-backdrop" data-close-drawer=""></div>
+      <div
+        aria-label="Menu"
+        aria-modal="true"
+        class="mobile-drawer-panel"
+        role="dialog"
+      >
+        <div class="mobile-drawer-header">
+          <span class="mobile-drawer-title">Menu</span>
+        </div>
+          <div class="mobile-drawer-links">
+            <a class="nav-link" href="#home">Intro</a>
+            <a class="nav-link" href="#story">Story</a>
+            <a class="nav-link" href="#timeline">Timeline</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <div class="mobile-drawer-cta">
+          <a
+            class="btn btn-ghost"
+            href="assets/Faniel_Habte_Resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i aria-hidden="true" class="fa-regular fa-file-pdf"></i>
+            Resume
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-arrow-up-right-from-square external-icon"
+            ></i>
+          </a>
+          <a
+            class="btn btn-ghost"
+            href="https://www.linkedin.com/in/fanielhabte"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i aria-hidden="true" class="fa-brands fa-linkedin"></i>
+            LinkedIn
+            <i
+              aria-hidden="true"
+              class="fa-solid fa-arrow-up-right-from-square external-icon"
+            ></i>
+          </a>
         </div>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="about" class="experience">
-      <div class="container">
-        <div class="experience-grid">
-          <div class="experience-card">
-            <div class="experience-icon">
-              <a
-                href="https://sustainability.aboutamazon.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+    </div>
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Business Intelligence Engineer · Seattle</p>
+            <h1 class="hero-title">Hi, I’m Fani.</h1>
+            <p class="hero-subtitle">
+              I build analytics products that turn messy, real-world data into
+              clear decisions—dashboards people trust, and pipelines that don’t
+              break when things change.
+            </p>
+            <div aria-label="Quick highlights" class="hero-chips">
+              <span class="chip"
+                ><i class="fa-solid fa-chart-line"></i> BI &amp;
+                Dashboards</span
               >
-                <img
-                  src="photos/amazon-logo.png"
-                  alt="Amazon"
-                  class="company-logo"
-                />
+              <span class="chip"
+                ><i class="fa-solid fa-database"></i> SQL &amp;
+                Warehousing</span
+              >
+              <span class="chip"
+                ><i class="fa-solid fa-gears"></i> ETL &amp; Automation</span
+              >
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#timeline">
+                <i aria-hidden="true" class="fa-solid fa-road"></i>
+                Career timeline
+              </a>
+              <a class="btn btn-primary" href="#projects">
+                <i aria-hidden="true" class="fa-solid fa-code"></i>
+                Personal projects
+              </a>
+              <a
+                class="btn btn-ghost"
+                href="assets/Faniel_Habte_Resume.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i aria-hidden="true" class="fa-regular fa-file-lines"></i>
+                Resume
+                <i
+                  aria-hidden="true"
+                  class="fa-solid fa-arrow-up-right-from-square external-icon"
+                ></i>
               </a>
             </div>
-            <h3>Right now, I build data solutions and dashboards at Amazon</h3>
-            <p>
-              2024 — Business Intelligence Engineer (Sustainability), creating
-              executive dashboards and automated reporting systems.
-            </p>
-            <p>
-              2023-2024 — Business Analyst Intern (Sustainability), migrated
-              Tableau dashboards to QuickSight and managed AWS data pipelines.
-            </p>
-            <p>
-              2022-2023 — Amazon Flex Driver, optimized delivery routes and
-              addressed customer concerns.
-            </p>
-            <div class="experience-arrow">→</div>
           </div>
-          <div class="experience-card">
-            <div class="experience-icon">
-              <a
-                href="http://www.palmatrucking.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="photos/palmatrucking-logo.png"
-                  alt="Palma Trucking"
-                  class="company-logo"
-                />
-              </a>
-            </div>
-            <h3>Previously, I was a bookkeeper and logistics specialist</h3>
-            <p>
-              2022-2023 — Bookkeeper at Palma Trucking LLC, streamlined AR/AP
-              processes and improved financial accuracy.
-            </p>
-            <div class="experience-arrow">→</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Background Section -->
-    <section class="background">
-      <div class="container">
-        <div class="background-grid">
-          <div class="background-card">
-            <h3>I started my career in software development</h3>
-            <p>
-              Currently pursuing a Bachelor of Science in Software Engineering
-              at Western Governors University, focusing on algorithms, data
-              structures, and software design.
-            </p>
-          </div>
-          <div class="background-card">
-            <h3>But my true passion is data and analytics</h3>
-            <p>
-              I transitioned to data engineering because I love transforming
-              complex information into actionable insights that drive business
-              decisions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills">
-      <div class="container">
-        <div class="skills-grid">
-          <div class="skills-card">
-            <div class="skills-icon">
+          <div class="hero-card card">
+            <div class="hero-photo-wrap">
               <img
-                src="photos/business-intelligence.png"
-                alt="Business Intelligence"
-                class="skills-icon-img"
+                alt="Faniel Habte"
+                class="profile-photo"
+                src="photos/professional-photo.jpeg"
               />
             </div>
-            <h3>I specialize in data analysis and visualization</h3>
-            <p>
-              Creating interactive dashboards with QuickSight, Tableau, and
-              Power BI. Building 20+ dashboards that save 20+ hours/month in
-              reporting.
-            </p>
-            <div class="skills-arrow">→</div>
-          </div>
-          <div class="skills-card">
-            <div class="skills-icon">
-              <img
-                src="photos/data-pipeline.png"
-                alt="Data Pipeline"
-                class="skills-icon-img"
-              />
-            </div>
-            <h3>I also build robust data pipelines</h3>
-            <p>
-              Designing ETL processes with AWS services, managing data
-              warehouses, and ensuring reliable data flow for business
-              intelligence needs.
-            </p>
-            <div class="skills-arrow">→</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>VP-Level Executive Dashboard</h3>
-            <p>
-              Owned and developed VP-level executive dashboard presented at SVP
-              review, providing critical business insights and KPIs for
-              strategic decision-making.
-            </p>
-            <div class="project-tools">
-              <img
-                src="photos/amazon-quicksight.png"
-                alt="Amazon QuickSight"
-                class="tool-icon"
-              />
-              <img src="photos/tableau.png" alt="Tableau" class="tool-icon" />
-              <img
-                src="photos/excel.png"
-                alt="Microsoft Excel"
-                class="tool-icon"
-              />
-            </div>
-            <div class="project-arrow">→</div>
-          </div>
-          <div class="project-card">
-            <h3>Product Engagement Analysis</h3>
-            <p>
-              Led comprehensive product engagement analysis across
-              sustainability platforms, creating dashboards to track user
-              behavior and platform performance.
-            </p>
-            <div class="project-tools">
-              <img
-                src="photos/amazon-quicksight.png"
-                alt="Amazon QuickSight"
-                class="tool-icon"
-              />
-              <img
-                src="photos/amazon-athena.png"
-                alt="Amazon Athena"
-                class="tool-icon"
-              />
-              <img src="photos/python.png" alt="Python" class="tool-icon" />
-            </div>
-            <div class="project-arrow">→</div>
-          </div>
-          <div class="project-card">
-            <h3>Automated Reporting System</h3>
-            <p>
-              Built 20+ QuickSight dashboards to automate reporting and save 20+
-              hours/month, improving efficiency and data accessibility.
-            </p>
-            <div class="project-tools">
-              <img
-                src="photos/amazon-quicksight.png"
-                alt="Amazon QuickSight"
-                class="tool-icon"
-              />
-              <img src="photos/aws_glue.png" alt="AWS Glue" class="tool-icon" />
-              <img
-                src="photos/amazon-redshift.png"
-                alt="Amazon Redshift"
-                class="tool-icon"
-              />
-            </div>
-            <div class="project-arrow">→</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-icon">👋</div>
-            <h3>Always down to collaborate when I have the time</h3>
-            <p>Reach out for case studies and opportunities.</p>
-            <div class="contact-arrow">→</div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-info">
-              <a href="mailto:fanielhabte1@gmail.com" class="contact-email"
-                >fanielhabte1@gmail.com</a
-              >
-              <div class="contact-links">
+            <div class="hero-card-body">
+              <p class="hero-card-title">What I focus on</p>
+              <ul class="bullets">
+                <li>Simple, self-serve metrics for busy stakeholders</li>
+                <li>Reliable data models + clear definitions</li>
+                <li>Automation that saves time without hiding the truth</li>
+              </ul>
+              <div class="hero-card-links">
                 <a
+                  class="text-link"
+                  href="https://github.com/fanielhabte"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-github"></i>
+                  GitHub
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+                <a
+                  class="text-link"
                   href="https://www.linkedin.com/in/fanielhabte"
-                  class="contact-link"
-                  >LinkedIn</a
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                <a href="https://github.com/fanielhabte" class="contact-link"
-                  >GitHub</a
-                >
+                  <i aria-hidden="true" class="fa-brands fa-linkedin"></i>
+                  LinkedIn
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
+      </section>
+      <!-- Story -->
+      <section class="section" id="story">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">My story</h2>
+            <p class="section-subtitle">
+              A quick snapshot of how I think, what I enjoy, and why I’m in this
+              work.
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
+              <h3 class="card-title">How I got here</h3>
+              <p class="card-text">
+                I started in operations and bookkeeping, where I learned that
+                clarity matters—when numbers are messy, everything slows down.
+                That pushed me toward analytics: building systems that keep
+                teams aligned and decisions grounded.
+              </p>
+              <p class="card-text">
+                Today, I’m focused on analytics engineering and data
+                engineering—strong definitions, dependable pipelines, and
+                stakeholder-ready storytelling.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fa-solid fa-guitar"></i></div>
+              <h3 class="card-title">Outside work</h3>
+              <p class="card-text">
+                When I’m not building dashboards, I’m usually learning guitar,
+                traveling, or chasing a new skill that makes me better at
+                building products.
+              </p>
+              <div aria-label="Interests" class="chip-row">
+                <span class="chip chip-soft"
+                  ><i class="fa-solid fa-music"></i> Guitar</span
+                >
+                <span class="chip chip-soft"
+                  ><i class="fa-solid fa-plane"></i> Travel</span
+                >
+                <span class="chip chip-soft"
+                  ><i class="fa-solid fa-book"></i> Learning</span
+                >
+              </div>
+              <div aria-label="Optional photo section" class="mini-gallery">
+                <div class="mini-tile">
+                  <i aria-hidden="true" class="fa-regular fa-image"></i>
+                  <span>Add a travel photo</span>
+                </div>
+                <div class="mini-tile">
+                  <i aria-hidden="true" class="fa-regular fa-image"></i>
+                  <span>Add a hobby photo</span>
+                </div>
+                <div class="mini-tile">
+                  <i aria-hidden="true" class="fa-regular fa-image"></i>
+                  <span>Add a moment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Timeline -->
+      <section class="section section-alt" id="timeline">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Career timeline</h2>
+            <p class="section-subtitle">
+              A narrative timeline (high-level) — the detailed bullets live in
+              my resume.
+            </p>
+            <div class="section-actions">
+              <a
+                class="btn btn-ghost"
+                href="assets/Faniel_Habte_Resume.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i aria-hidden="true" class="fa-regular fa-file-pdf"></i>
+                Resume
+                <i
+                  aria-hidden="true"
+                  class="fa-solid fa-arrow-up-right-from-square external-icon"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item" data-reveal="">
+              <div aria-hidden="true" class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-range">2024 — Present</span>
+                  <span class="timeline-badge">Work</span>
+                </div>
+                <h3 class="timeline-title">
+                  Business Intelligence Engineer · Amazon
+                </h3>
+                <p class="timeline-text">
+                  Building analytics and reporting experiences for
+                  sustainability initiatives—bringing together data pipelines,
+                  clear metric definitions, and dashboards built for leadership
+                  decisions.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal="">
+              <div aria-hidden="true" class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-range">2025 — 2028</span>
+                  <span class="timeline-badge">Education</span>
+                </div>
+                <h3 class="timeline-title">B.S. Software Engineering · WGU</h3>
+                <p class="timeline-text">
+                  Building deeper software fundamentals (data structures,
+                  systems design) to complement my analytics and data
+                  engineering work.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal="">
+              <div aria-hidden="true" class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-range">2023 — 2024</span>
+                  <span class="timeline-badge">Work</span>
+                </div>
+                <h3 class="timeline-title">Business Analyst Intern · Amazon</h3>
+                <p class="timeline-text">
+                  Worked across product and analytics to make customer sentiment
+                  and engagement easier to measure—modernizing dashboards and
+                  strengthening the data behind them.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal="">
+              <div aria-hidden="true" class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-range">2023 — 2024</span>
+                  <span class="timeline-badge">Education</span>
+                </div>
+                <h3 class="timeline-title">
+                  Year Up · Seattle Central College
+                </h3>
+                <p class="timeline-text">
+                  Intensive training across software development, testing, and
+                  professional skills—helped me bridge into analytics roles.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal="">
+              <div aria-hidden="true" class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-range">2022 — 2023</span>
+                  <span class="timeline-badge">Work</span>
+                </div>
+                <h3 class="timeline-title">
+                  Bookkeeper &amp; Operations · Palma Trucking
+                </h3>
+                <p class="timeline-text">
+                  Learned the operational side of data: reconciling numbers,
+                  tightening processes, and communicating clearly under
+                  pressure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">
+              Core strengths and what I'm sharpening now: clear definitions,
+              strong models, honest automation, and collaborative communication.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="card" data-reveal="">
+              <div class="card-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+              <h3 class="card-title">Analytics &amp; BI</h3>
+              <div class="chip-row">
+                <span class="chip">QuickSight</span>
+                <span class="chip">Tableau</span>
+                <span class="chip">Excel</span>
+                <span class="chip">KPI design</span>
+                <span class="chip">Executive reporting</span>
+                <span class="chip">Stakeholder storytelling</span>
+              </div>
+            </div>
+            <div class="card" data-reveal="">
+              <div class="card-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <h3 class="card-title">Data engineering</h3>
+              <div class="chip-row">
+                <span class="chip">Data modeling</span>
+                <span class="chip">AWS</span>
+                <span class="chip">S3</span>
+                <span class="chip">Glue</span>
+                <span class="chip">Redshift</span>
+                <span class="chip">ETL</span>
+                <span class="chip">APIs</span>
+                <span class="chip">Data quality</span>
+              </div>
+            </div>
+            <div class="card" data-reveal="">
+              <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+              <h3 class="card-title">Programming</h3>
+              <div class="chip-row">
+                <span class="chip">SQL</span>
+                <span class="chip">Python</span>
+              </div>
+            </div>
+            <div class="card" data-reveal="">
+              <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h3 class="card-title">Learning</h3>
+              <div class="chip-row">
+                <span class="chip">PySpark</span>
+                <span class="chip">Testing &amp; reliability</span>
+                <span class="chip">Data contracts</span>
+                <span class="chip">LLM + analytics workflows</span>
+                <span class="chip">System design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Personal projects</h2>
+            <p class="section-subtitle">
+              Real builds that show how I think. Each one includes what I build,
+              what I learned, and what I’d do next.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card project-card-wide" data-reveal="">
+              <div class="project-head">
+                <h3 class="project-title">Weekly Streak Lab</h3>
+                <span class="project-status status-streak">Weekly</span>
+              </div>
+              <p class="project-text">
+                Small, consistent weekly builds to keep my data engineering
+                skills sharp—clean → model → validate → ship.
+              </p>
+              <div class="streak-summary">
+                <span class="streak-pill"
+                  ><i aria-hidden="true" class="fa-solid fa-calendar"></i>
+                  Update cadence: Weekly</span
+                >
+                <span class="streak-pill"
+                  ><i aria-hidden="true" class="fa-solid fa-stopwatch"></i>
+                  Goal: Weekly builds</span
+                >
+                <span class="streak-pill"
+                  ><i
+                    aria-hidden="true"
+                    class="fa-solid fa-wand-magic-sparkles"
+                  ></i>
+                  Themes: cleanup · APIs · modeling · tests</span
+                >
+              </div>
+              <details class="accordion">
+                <summary>
+                  <i aria-hidden="true" class="fa-solid fa-layer-group"></i>
+                  View weekly sessions
+                </summary>
+                <div class="weekly-list" id="weekly-list"></div>
+              </details>
+              <script id="weekly-data" type="application/json">
+                [
+                  {
+                    "date": "2026-02-07",
+                    "title": "Weekly pipeline cleanup",
+                    "summary": "Placeholder: tightened transformations and refreshed data quality checks for the weekly build.",
+                    "skills": [
+                      { "label": "Python", "icon": "fa-brands fa-python" },
+                      { "label": "Data Quality", "icon": "fa-solid fa-shield-halved" },
+                      { "label": "Logging", "icon": "fa-solid fa-clipboard-list" }
+                    ]
+                  },
+                  {
+                    "date": "2026-01-31",
+                    "title": "Schema review + docs",
+                    "summary": "Placeholder: updated schema contracts and wrote short notes for downstream reporting.",
+                    "skills": [
+                      { "label": "SQL", "icon": "fa-solid fa-database" },
+                      { "label": "Docs", "icon": "fa-solid fa-file-lines" },
+                      { "label": "Modeling", "icon": "fa-solid fa-diagram-project" }
+                    ]
+                  },
+                  {
+                    "date": "2026-01-24",
+                    "title": "API resilience pass",
+                    "summary": "Placeholder: added retry/backoff and sanity checks for weekly ingestion.",
+                    "skills": [
+                      { "label": "APIs", "icon": "fa-solid fa-plug" },
+                      { "label": "Error Handling", "icon": "fa-solid fa-triangle-exclamation" },
+                      { "label": "Testing", "icon": "fa-solid fa-vial" }
+                    ]
+                  }
+                ]
+              </script>
+            </article>
+            <article class="project-card" data-reveal="">
+              <div class="project-head">
+                <h3 class="project-title">Geopolitics Analysis Pipeline</h3>
+                <span class="project-status status-completed">Completed</span>
+              </div>
+              <p class="project-text">
+                A reproducible pipeline that turns raw geopolitical indicators
+                into curated tables and narrative insights for trend and driver
+                analysis.
+              </p>
+              <ul class="bullets bullets-tight">
+                <li>Raw → curated transforms with snapshotting</li>
+                <li>Schema-first JSON outputs for insight generation</li>
+                <li>Logging + data-quality checks (outliers, missingness)</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">Python</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Data modeling</span>
+                <span class="chip">Logging</span>
+                <span class="chip">Data quality</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/FanielHabte/geopolitics_project"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-github"></i>
+                  Code
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+              </div>
+            </article>
+            <article class="project-card" data-reveal="">
+              <div class="project-head">
+                <h3 class="project-title">Seattle Clean Energy</h3>
+                <span class="project-status status-ongoing">Ongoing</span>
+              </div>
+              <p class="project-text">
+                An end-to-end exploration of Seattle’s clean energy transition
+                using public datasets—cleaning, modeling, and visual
+                storytelling to surface trends and drivers.
+              </p>
+              <div class="chip-row">
+                <span class="chip">Python</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">Open data</span>
+                <span class="chip">Visualization</span>
+                <span class="chip">Storytelling</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/FanielHabte/seattle_clean_energy_project"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-github"></i>
+                  Code
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+              </div>
+            </article>
+            <article class="project-card" data-reveal="">
+              <div class="project-head">
+                <h3 class="project-title">Raw → Curated Data Pipeline</h3>
+                <span class="project-status status-progress">In progress</span>
+              </div>
+              <p class="project-text">
+                A small-but-real pipeline that ingests JSON, cleans it,
+                standardizes schema, and publishes curated tables for analysis.
+              </p>
+              <ul class="bullets bullets-tight">
+                <li>Idempotent runs + snapshotting</li>
+                <li>Schema-aware transformations</li>
+                <li>Basic logging + error handling patterns</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">Python</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">JSON</span>
+                <span class="chip">Data modeling</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="https://github.com/fanielhabte"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-github"></i>
+                  Code
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+              </div>
+            </article>
+            <article class="project-card" data-reveal="">
+              <div class="project-head">
+                <h3 class="project-title">
+                  Feedback Analyzer (Redshift ML + Bedrock)
+                </h3>
+                <span class="project-status status-drafted">Drafted</span>
+              </div>
+              <p class="project-text">
+                A text-to-insights workflow that extracts sentiment and action
+                items from feedback and returns structured JSON for downstream
+                reporting.
+              </p>
+              <ul class="bullets bullets-tight">
+                <li>Prompting for deterministic structure</li>
+                <li>Confidence scoring patterns</li>
+                <li>Evaluation ideas (sampling + QA checks)</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">Redshift</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Bedrock</span>
+                <span class="chip">LLM</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="text-link"
+                  href="assets/Feedback_Analyzer_Proposal.txt"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-regular fa-file-lines"></i>
+                  Proposal
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">
+              Let’s connect — I respond fastest by email.
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card" data-reveal="">
+              <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+              <h3 class="card-title">Collaboration summary</h3>
+              <p class="card-text">
+                Open to thoughtful collaboration, feedback, and knowledge
+                sharing across analytics, BI, and data engineering.
+              </p>
+            </div>
+            <div class="card" data-reveal="">
+              <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3 class="card-title">Reach me</h3>
+              <p class="card-text">
+                <a class="contact-email" href="mailto:fanielhabte1@gmail.com"
+                  >fanielhabte1@gmail.com</a
+                >
+              </p>
+              <div class="contact-links">
+                <a
+                  class="btn btn-ghost"
+                  href="https://www.linkedin.com/in/fanielhabte"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-linkedin"></i>
+                  LinkedIn
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+                <a
+                  class="btn btn-ghost"
+                  href="https://github.com/fanielhabte"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-brands fa-github"></i>
+                  GitHub
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+                <a
+                  class="btn btn-ghost"
+                  href="assets/Faniel_Habte_Resume.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i aria-hidden="true" class="fa-regular fa-file-pdf"></i>
+                  Resume
+                  <i
+                    aria-hidden="true"
+                    class="fa-solid fa-arrow-up-right-from-square external-icon"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <div class="container">
-        <p>All the best,<br />Faniel</p>
-        <p class="footer-copyright">&copy; 2024 Faniel Habte</p>
+        <p class="footer-signoff">All the best,<br />Faniel</p>
+        <p class="footer-meta">© <span id="year"></span> Faniel Habte</p>
       </div>
     </footer>
-
     <script src="script.js"></script>
-    <script>
-      // Immediate time update and start dynamic updates
-      function updateTimeInline() {
-        const timeElement = document.getElementById("current-time");
-        if (timeElement) {
-          const now = new Date();
-          const timeString = now.toLocaleTimeString("en-US", {
-            hour: "numeric",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: true,
-          });
-          timeElement.textContent = timeString;
-        }
-      }
-
-      // Update immediately
-      updateTimeInline();
-
-      // Start dynamic updates
-      setInterval(updateTimeInline, 1000);
-
-      // Also update when DOM is ready
-      document.addEventListener("DOMContentLoaded", function () {
-        updateTimeInline();
-        setInterval(updateTimeInline, 1000);
-      });
-    </script>
   </body>
 </html>

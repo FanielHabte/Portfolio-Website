@@ -1,0 +1,12 @@
+Feedback Analyzer Proposal (Draft)
+
+Purpose:
+- Outline the text-to-insights workflow for extracting sentiment and action items.
+
+Scope:
+- Ingest feedback text
+- Generate structured JSON outputs
+- Provide basic evaluation and confidence scoring
+
+Notes:
+- Replace this placeholder with the full BRD/proposal document.
