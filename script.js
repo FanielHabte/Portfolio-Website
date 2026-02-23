@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollSpy();
   initReveal();
   initWeeklyStreak();
+  initTimelineGroupDurations();
+  initTimelineDotAlignment();
 });
 
 function initTheme() {
@@ -228,6 +230,125 @@ function initReveal() {
   );
 
   els.forEach((el) => io.observe(el));
+}
+
+function initTimelineGroupDurations() {
+  const labels = document.querySelectorAll(".timeline-company-duration[data-duration-start]");
+  if (!labels.length) return;
+
+  const parseMonthValue = (value) => {
+    if (!value) return null;
+    const normalized = value.trim().toLowerCase();
+    if (normalized === "present") {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), 1);
+    }
+
+    const match = /^(\d{4})-(\d{2})$/.exec(normalized);
+    if (!match) return null;
+
+    const year = Number(match[1]);
+    const monthIndex = Number(match[2]) - 1;
+    if (monthIndex < 0 || monthIndex > 11) return null;
+
+    return new Date(year, monthIndex, 1);
+  };
+
+  const formatDuration = (monthsTotal) => {
+    const years = Math.floor(monthsTotal / 12);
+    const months = monthsTotal % 12;
+    const parts = [];
+
+    if (years > 0) parts.push(`${years} yr${years === 1 ? "" : "s"}`);
+    if (months > 0) parts.push(`${months} mo${months === 1 ? "" : "s"}`);
+    if (!parts.length) return "0 mos";
+
+    return parts.join(" ");
+  };
+
+  labels.forEach((label) => {
+    const start = parseMonthValue(label.dataset.durationStart || "");
+    const end = parseMonthValue(label.dataset.durationEnd || "present");
+
+    if (!start || !end || end < start) return;
+
+    const monthsTotal =
+      (end.getFullYear() - start.getFullYear()) * 12 +
+      (end.getMonth() - start.getMonth());
+
+    label.textContent = formatDuration(monthsTotal);
+  });
+}
+
+function initTimelineDotAlignment() {
+  const careerTimeline = document.querySelector(".timeline-career");
+  const educationTimeline = document.querySelector(".timeline-education");
+  if (!careerTimeline || !educationTimeline) return;
+
+  const media = window.matchMedia("(min-width: 921px)");
+
+  const getCareerDots = () =>
+    careerTimeline.querySelectorAll(".timeline-item .timeline-dot");
+  const getEducationDots = () =>
+    educationTimeline.querySelectorAll(".timeline-item .timeline-dot");
+  const getEducationGroups = () =>
+    educationTimeline.querySelectorAll(".timeline-group");
+
+  const reset = () => {
+    educationTimeline.style.removeProperty("padding-top");
+    const educationGroups = getEducationGroups();
+    if (educationGroups[1]) educationGroups[1].style.removeProperty("margin-top");
+  };
+
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+  const align = () => {
+    reset();
+    if (!media.matches) return;
+
+    const careerDots = getCareerDots();
+    const educationDots = getEducationDots();
+    const educationGroups = getEducationGroups();
+    if (careerDots.length < 2 || educationDots.length < 2 || educationGroups.length < 2) {
+      return;
+    }
+
+    const firstOffset = Math.round(
+      careerDots[0].getBoundingClientRect().top - educationDots[0].getBoundingClientRect().top
+    );
+    if (firstOffset !== 0) {
+      educationTimeline.style.paddingTop = `${clamp(firstOffset, -120, 220)}px`;
+    }
+
+    const secondOffset = Math.round(
+      careerDots[1].getBoundingClientRect().top - educationDots[1].getBoundingClientRect().top
+    );
+    if (secondOffset !== 0) {
+      educationGroups[1].style.marginTop = `${clamp(secondOffset, -100, 220)}px`;
+    }
+  };
+
+  let rafId = null;
+  const scheduleAlign = () => {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      align();
+    });
+  };
+
+  scheduleAlign();
+  window.addEventListener("resize", scheduleAlign, { passive: true });
+
+  if (typeof media.addEventListener === "function") {
+    media.addEventListener("change", scheduleAlign);
+  } else if (typeof media.addListener === "function") {
+    media.addListener(scheduleAlign);
+  }
+
+  if (document.fonts && typeof document.fonts.ready?.then === "function") {
+    document.fonts.ready.then(scheduleAlign).catch(() => {});
+  }
 }
 
 
